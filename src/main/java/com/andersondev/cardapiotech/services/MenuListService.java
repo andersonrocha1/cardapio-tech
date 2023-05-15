@@ -3,6 +3,7 @@ package com.andersondev.cardapiotech.services;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.andersondev.cardapiotech.dto.MenuListDTO;
@@ -12,7 +13,7 @@ import com.andersondev.cardapiotech.repositories.MenuListRepository;
 import com.andersondev.cardapiotech.repositories.MenuRepository;
 
 
-
+@Service
 public class MenuListService {
 	
 	@Autowired
