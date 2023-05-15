@@ -32,26 +32,51 @@ public class MenuTodosDTO {
 		return id;
 	}
 
+	public void setId(Long id) {
+		this.id = id;
+	}
+
 	public String getTitle() {
 		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
 	}
 
 	public String getImgUrl() {
 		return imgUrl;
 	}
 
+	public void setImgUrl(String imgUrl) {
+		this.imgUrl = imgUrl;
+	}
+
 	public String getShortDescription() {
 		return shortDescription;
+	}
+
+	public void setShortDescription(String shortDescription) {
+		this.shortDescription = shortDescription;
 	}
 
 	public String getLongDescription() {
 		return longDescription;
 	}
 
+	public void setLongDescription(String longDescription) {
+		this.longDescription = longDescription;
+	}
 
 	public Double getPrice() {
 		return price;
 	}
+
+	public void setPrice(Double price) {
+		this.price = price;
+	}
+
+	
 	
 	
 

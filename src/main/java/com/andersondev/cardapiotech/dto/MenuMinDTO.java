@@ -1,6 +1,8 @@
 package com.andersondev.cardapiotech.dto;
 
 import com.andersondev.cardapiotech.models.Menu;
+import com.andersondev.cardapiotech.projections.MenuMinProjection;
+
 
 public class MenuMinDTO {
 
@@ -30,7 +32,16 @@ public class MenuMinDTO {
 		price = entity.getPrice();
 		
 	}
-
+    
+public MenuMinDTO(MenuMinProjection projection) {
+		
+	id = projection.getId();
+	title = projection.getTitle();
+	imgUrl = projection.getImgUrl();
+	shortDescription = projection.getShortDescription();
+	price = projection.getPrice();
+		
+	}
 
 	public Long getId() {
 		return id;
