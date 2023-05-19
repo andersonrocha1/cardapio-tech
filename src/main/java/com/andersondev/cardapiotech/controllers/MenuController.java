@@ -5,11 +5,14 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.andersondev.cardapiotech.dto.MenuMinDTO;
 import com.andersondev.cardapiotech.dto.MenuTodosDTO;
+import com.andersondev.cardapiotech.models.Menu;
 import com.andersondev.cardapiotech.services.MenuService;
 
 @RestController
@@ -33,6 +36,14 @@ public class MenuController {
 		MenuTodosDTO result = menuService.findById(id);
 		return result;
 		
+	}
+	
+	@PostMapping
+	public Menu create(@RequestBody MenuTodosDTO menuDTO) {
+		
+		Menu menu = new Menu(menuDTO);
+		
+		return menu = menuService.create(menu);
 	}
 
 }

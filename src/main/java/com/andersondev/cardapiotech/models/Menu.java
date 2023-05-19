@@ -1,5 +1,7 @@
 package com.andersondev.cardapiotech.models;
 
+import com.andersondev.cardapiotech.dto.MenuTodosDTO;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -33,6 +35,16 @@ public class Menu {
 	private String longDescription;
 	
 	private Double price;
+	
+	
+	public Menu(MenuTodosDTO menuTodosDTO) {
+		this.title = menuTodosDTO.getTitle();
+		this.imgUrl = menuTodosDTO.getImgUrl();
+		this.shortDescription = menuTodosDTO.getShortDescription();
+		this.longDescription = menuTodosDTO.getLongDescription();
+		this.price = menuTodosDTO.getPrice();
+		
+	}
 	
 	
 

@@ -44,4 +44,12 @@ public class MenuService {
 				
 	}
 
+	@Transactional(readOnly = true)
+	public Menu create(Menu menu) {
+
+		return menuRepository.save(menu);
+		
+	}
+	
+	
 }
